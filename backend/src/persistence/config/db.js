@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME || 'chazinfood',
+  process.env.DB_NAME || 'practicachazinfood',
   process.env.DB_USER || 'root',
   process.env.DB_PASSWORD ?? '12345',
   {
@@ -25,7 +25,7 @@ const sequelize = new Sequelize(
 const connectDB = async () => {
   try {
     await sequelize.authenticate();
-    console.log('MySQL Conectado exitosamente con Sequelize ORM a "chazinfood"');
+    console.log(`MySQL Conectado exitosamente con Sequelize ORM a "${process.env.DB_NAME || 'practicachazinfood'}"`);
   } catch (error) {
     console.error(`Error de conexión a MySQL vía Sequelize: ${error.message}`);
     console.log('El backend continuará ejecutándose. Por favor asegúrate de que MySQL esté activo.');
