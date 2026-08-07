@@ -27,7 +27,7 @@ export function FichasTecnicas({ readOnly = false }) {
       <div className="p-4 lg:p-8 max-w-5xl mx-auto">
         <button
           onClick={() => setSelected(null)}
-          className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 mb-4 transition-colors"
+          className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 mb-4 transition-colors"
         >
           <ChevronLeft className="w-4 h-4" /> Volver al catálogo
         </button>
@@ -60,7 +60,7 @@ export function FichasTecnicas({ readOnly = false }) {
       {readOnly && (
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 mb-4 transition-colors"
+          className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 mb-4 transition-colors"
         >
           <ChevronLeft className="w-4 h-4" /> Volver a Cocina
         </Link>
@@ -86,7 +86,7 @@ export function FichasTecnicas({ readOnly = false }) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Buscar producto o categoría..."
-          className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+          className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-100 focus:ring-2 focus:ring-red-500"
         />
       </div>
 
@@ -95,7 +95,7 @@ export function FichasTecnicas({ readOnly = false }) {
           <button
             key={p.idProducto}
             onClick={() => setSelected(p)}
-            className="text-left bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-5 hover:shadow-md hover:border-red-200 dark:hover:border-red-800 transition-all active:scale-[0.99]"
+            className="text-left bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-5 hover:shadow-md hover:border-red-200 transition-all active:scale-[0.99]"
           >
             <div className="flex items-center gap-3 mb-3">
               <span className="text-3xl">{p.imagen}</span>
@@ -110,11 +110,6 @@ export function FichasTecnicas({ readOnly = false }) {
             </span>
           </button>
         ))}
-        {filtered.length === 0 && (
-          <p className="col-span-full text-center text-sm text-gray-500 dark:text-gray-400 py-12">
-            No se encontraron productos.
-          </p>
-        )}
       </div>
     </div>
   );
