@@ -78,15 +78,12 @@ export function Roles() {
 
   return (
     <div className="p-4 md:p-6 lg:p-8 bg-gray-50 dark:bg-gray-950 min-h-full">
-
-      {/* Header */}
       <div className="mb-6">
-        <h1 className="text-gray-900 dark:text-gray-100">Gestión de Roles</h1>
+        <h1 className="text-gray-900 dark:text-gray-100 font-bold text-2xl">Gestión de Roles</h1>
         <p className="text-gray-500 dark:text-gray-400 mt-1 text-sm">Administra los roles y permisos del sistema</p>
       </div>
 
-      {/* KPI Cards */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
         <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700/60 p-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-[#F05454]/10 rounded-xl flex items-center justify-center shrink-0">
@@ -122,7 +119,6 @@ export function Roles() {
         </div>
       </div>
 
-      {/* Search Bar + Nuevo Rol */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700/60 p-4 mb-6">
         <div className="flex gap-3">
           <div className="relative flex-1">
@@ -145,7 +141,6 @@ export function Roles() {
         </div>
       </div>
 
-      {/* Role Cards */}
       <RolesGrid
         roles={filteredRoles}
         onOpenPermisos={handleOpenPermisos}
@@ -154,7 +149,6 @@ export function Roles() {
         onDelete={deleteRol}
       />
 
-      {/* Modals */}
       <RolModal
         isOpen={rolModalOpen}
         onClose={() => setRolModalOpen(false)}
